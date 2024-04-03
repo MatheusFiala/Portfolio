@@ -5,83 +5,187 @@
     <head>
 
         <title>Portfólio</title>
-        <link rel="stylesheet" href="B:\Projeto-git\Portfólio\Portfólio.css">
+        <link rel="website icon" type="png" href="https://i.ibb.co/Jj5NjcN/IMG-20230101-122213222-HDR-2.jpg">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/ef613c4e80.js" crossorigin="anonymous"></script>
+
+        <!-- ----------------------------------- CSS ------------------------------------->
+        <style>
+            body{
+                background-color: #00ff8645;
+            }
+            #InformaçõesPessoais{
+                margin-top: 7%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                background-color: #ffc0cb96;
+                color: #7c00ff;
+            }
+            body{
+                font-family:sans-serif
+            }
+            p{
+                font-size: larger;
+            }
+            .fa-instagram {
+                font-size: 70px;
+                cursor: pointer;
+                transition: 600ms;
+                color: rgb(148, 53, 119);
+            }
+            .fa-whatsapp{
+                font-size: 70px;
+                cursor: pointer;
+                transition: 600ms;
+                color: rgb(16, 177, 37);
+            }
+            .fa-linkedin{
+                font-size: 70px;
+                cursor: pointer;
+                transition: 600ms;
+                color: darkblue;
+            }
+            #redessociais{
+                display: flex;
+                justify-content: space-between;
+                width: 13%;
+            }
+            @keyframes roda-roda {
+                from { transform: rotate(0deg); }
+                to   { transform: rotate(360deg); }
+            }
+            .fa-instagram:hover, .fa-linkedin:hover, .fa-whatsapp:hover{
+                animation: roda-roda .9s alternate linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%)
+            }
+            #dowloadcurriculo{
+                display: flex;
+                width: 15%;
+                justify-content: center;
+                margin-top: 1%;
+            }
+            #botaocurriculo{
+                cursor: pointer;
+                background-color: red;
+                color: white;
+                border-radius: 20px;
+                width: 60%;
+                height: 40px;
+                transition: 600ms;
+                font-size: medium;
+            }
+            #botaocurriculo:hover{
+                transform: scale(1.2);
+                background-image: url("https://i.pinimg.com/originals/a4/98/84/a49884a37da30531668e80d29b872c0b.gif");
+                color: black;
+                font-size: larger;
+                font-weight: bold;
+                text-shadow: 0px 0px 15px black;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: #31ff00c2;
+            }
+            #fotoperfil{
+                display: flex;
+                flex-direction: column;
+                width: 13%;
+                align-items: center;
+            }
+            #fotoperfil img{
+                width: 180px;
+                border-radius: 60px;
+            }
+            #Tecnologias{
+                display: flex;
+                width: 50%;
+                align-items: center;
+                flex-direction: column;
+                position: absolute;
+                margin-left: 60%;
+            }
+
+            #Tecnologias img{
+                width: 220px;
+                cursor: pointer;
+                transition: 600ms;
+            }
+            #Tecnologias img:hover{
+                transform: scale(1.2);
+            }
+            #Projetos{
+                display: flex;
+                position: absolute;
+                width: 90%;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        </style>
+
 
     </head>
+
     <body>
 
-        <h1 id="titulo">Olá meu nome é João Matheus Fiala e este é meu Portfólio.</h1>
+        <div id="InformaçõesPessoais">
 
-        <div id="tecnologias">
-            <h2 id="titulotecnologias">
-                Técnologias que possuo conhecimento:
-            </h2>
+            <div id="fotoperfil">
+                <img src="https://i.ibb.co/Jj5NjcN/IMG-20230101-122213222-HDR-2.jpg">
+            </div>
 
-            <input type="checkbox" id="botaohtml">
+            <div id="redessociais"> 
+                <a href="https://www.instagram.com/matheus_fiala/"> <i class="fa-brands fa-instagram"> </i></a>
+                <a href="https://api.whatsapp.com/send/?phone=5541984814603&text&type=phone_number&app_absent=0"> <i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://br.linkedin.com/in/matheus-fiala-49a300219"> <i class="fa-brands fa-linkedin"></i> </a>
+            </div>
 
-            <input type="checkbox" id="botaojs">
+            <div>
+                <p> Telefones para contato: (41)984814603 / (41)998018374 </p>
+                <p> Email: matheusfiala10@gmail.com </p>
+                <p> Data de nascimento: 06/08/2003 </p>
+            </div>
+            <div id="dowloadcurriculo"> <button id="botaocurriculo" onclick="DowloadCurriculo()"> Baixar Currículo </button> </div>
 
-            <input type="checkbox" id="botaocss">
+            <div id="Tecnologias">
+                <h1> Tecnologias </h1>
 
-            <input type="checkbox" id="botaopython">
+                <img src="https://tmpfiles.nohat.cc/full-m2i8G6K9Z5i8H7N4.png">
+                <img src="https://seeklogo.com/images/N/nodejs-logo-065257DE24-seeklogo.com.png">
+                <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/socketio_logo_icon_168806.png">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Python_logo_and_wordmark.svg/2560px-Python_logo_and_wordmark.svg.png">
+            </div>
+
+            <div id="Projetos">
+                <h1> Projetos </h1>
+
+                <a href="https://github.com/MatheusFiala/Game-Defuse-the-Bomb"> Game-Defuse-the-Bomb </a>
+
+                <a href="https://github.com/MatheusFiala/Projeto-git"> Portfólio </a>
+
+            </div>
+        </div>
+
+     <!-- ----------------------------------- JavaScript ------------------------------------->
+        <script>
+
+            function DowloadCurriculo() {
             
-            <img id="imgtecnologias1" src = "https://tmpfiles.nohat.cc/full-m2i8G6K9Z5i8H7N4.png">
-            <img id="imgtecnologias2" src = "https://cdn.icon-icons.com/icons2/2699/PNG/512/python_vertical_logo_icon_168039.png">
-            
-        </div>
+            var pdfURL = "https://1drv.ms/b/c/6c9ae79a201d385c/EXEdE2n_CBtFn_qhDiA8AP8BwYZiYh-RDulHKdrt7ykBqg?e=oc60LE";
 
-        <div id="Modal-html" class="modal">
+            var link = document.createElement("a");
+            link.href = pdfURL;
 
-            <div class="conteudomontal">
+            link.download = "João Matheus Fiala - Currículo.pdf";
 
-                <div class="divX"> <button class="x" onclick="Fechahtml()" >X</button> </div>
+            document.body.appendChild(link);
 
-              <p> Em Html possuo um conhecimento avançado com capacidade para criar sites com telas de login por exemplo e outras coisas. </p>
+            link.click();
 
-            </div>
-          
-        </div>
+            document.body.removeChild(link);
+            }
 
-        <div id="Modal-js" class="modal">
-
-            <div class="conteudomontal">
-
-                <div class="divX"> <button class="x" onclick="Fechajs()" >X</button> </div>
-
-              <p> Em JavaScript possuo conhecimento Front-End. </p>
-
-            </div>
-          
-        </div>
-
-        <div id="Modal-css" class="modal">
-
-            <div class="conteudomontal">
-
-                <div class="divX"> <button class="x" onclick="Fechacss()" >X</button> </div>
-
-              <p> Em CSS possuo conhecimento avançado para estilizar páginas. </p>
-
-            </div>
-          
-        </div>
-
-        <div id="Modal-python" class="modal">
-
-            <div class="conteudomontal">
-
-                <div class="divX"> <button class="x" onclick="Fechapython()" >X</button> </div>
-
-              <p> Em Python possuo capacidade para criar robôs de automação básicos, 
-                conhecimento em algumas Técnologias para automação como por exemplo Seleniun e Pyautogui,
-                e outras coisas mais.
-
-             </p>
-            </div>
-          
-        </div>
-    
-        <script src="B:\Projeto-git\Portfólio\Portfólio.js"> </script>
+        </script>
     </body>
     
         
